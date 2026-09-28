@@ -1,0 +1,296 @@
+/* ================================
+   ELIAS' STUDENT WEBSITE
+   White & Navy Blue Theme
+   ================================ */
+
+/* ---------- General ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --navy: #0b1f3a;
+    --navy-light: #16365f;
+    --blue: #245ea8;
+    --white: #ffffff;
+    --light-bg: #f4f7fb;
+    --text: #243447;
+    --border: #dce4ee;
+    --shadow: 0 8px 25px rgba(11, 31, 58, 0.10);
+}
+
+html {
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--light-bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+}
+
+/* ---------- Page Heading ---------- */
+body > h1 {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 35px 20px;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    letter-spacing: 0.5px;
+}
+
+/* ---------- Navigation Bar ---------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    border-bottom: 3px solid var(--navy);
+    box-shadow: 0 4px 15px rgba(11, 31, 58, 0.12);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0;
+}
+
+.navbar a {
+    display: block;
+    color: var(--navy);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 17px 18px;
+    transition: all 0.25s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+    background: var(--navy);
+    color: var(--white);
+    border-bottom-color: var(--blue);
+}
+
+/* ---------- Main Content ---------- */
+main {
+    width: min(1100px, 92%);
+    margin: 35px auto;
+}
+
+/* ---------- Sections / Cards ---------- */
+main > section,
+main section {
+    background: var(--white);
+    margin-bottom: 28px;
+    padding: 30px;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+section h2 {
+    color: var(--navy);
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--navy);
+}
+
+section h2 u {
+    text-decoration: none;
+}
+
+section p {
+    margin-bottom: 16px;
+}
+
+section strong {
+    color: var(--navy);
+}
+
+section em {
+    color: var(--blue);
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* ---------- Links ---------- */
+a {
+    color: var(--blue);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--navy);
+}
+
+/* ---------- Hobbies / Lists ---------- */
+section ul {
+    padding-left: 25px;
+}
+
+section li {
+    margin: 8px 0;
+}
+
+section li::marker {
+    color: var(--blue);
+}
+
+/* ---------- Photos ---------- */
+section img {
+    width: 300px;
+    height: 0x;
+    object-fit: cover;
+    margin: 8px;
+    border-radius: 12px;
+    border: 4px solid var(--white);
+    outline: 1px solid var(--border);
+    box-shadow: 0 10px 100px rgba(11, 31, 58, 0.15);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+section img:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(11, 31, 58, 0.22);
+}
+
+/* ---------- Video & Audio ---------- */
+video {
+    display: block;
+    width: min(100%, 500px);
+    height: auto;
+    margin: 15px 0 25px;
+    border-radius: 12px;
+    border: 4px solid var(--navy);
+    background: #000;
+    box-shadow: var(--shadow);
+}
+
+audio {
+    width: min(100%, 600px);
+    margin-top: 8px;
+}
+
+/* ---------- Contact ---------- */
+#Contact + p a,
+section a[href^="mailto:"],
+section a[href^="tel:"] {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+section a[href^="mailto:"]:hover,
+section a[href^="tel:"]:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Bottom Home Navigation ---------- */
+main > section:last-child .navbar {
+    position: static;
+    border: 0;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+main > section:last-child .navbar ul {
+    justify-content: center;
+}
+
+main > section:last-child .navbar a {
+    background: var(--navy);
+    color: var(--white);
+    border-radius: 8px;
+    padding: 12px 28px;
+}
+
+main > section:last-child .navbar a:hover {
+    background: var(--blue);
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 768px) {
+    body > h1 {
+        padding: 25px 15px;
+    }
+
+    .navbar ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 0 5px;
+    }
+
+    .navbar a {
+        white-space: nowrap;
+        padding: 14px 13px;
+        font-size: 0.9rem;
+    }
+
+    main {
+        width: 94%;
+        margin: 22px auto;
+    }
+
+    main > section,
+    main section {
+        padding: 22px;
+        border-radius: 10px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+
+    section img {
+        width: calc(50% - 18px);
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    body > h1 {
+        font-size: 1.6rem;
+    }
+
+    section img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+    }
+
+    main > section,
+    main section {
+        padding: 18px;
+    }
+}
+
+/* ---------- Accessibility ---------- */
+a:focus-visible {
+    outline: 3px solid #6fa8dc;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
