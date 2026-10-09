@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Elias Njamba Phiri - My Student Website</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- PAGE HEADER -->
+    <header>
+        <h1>Welcome to ELIAS' Web Page</h1>
+    </header>
+
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar">
+
+        <div class="nav-header">
+
+            <a href="#" class="nav-logo">MY<span>PORTFOLIO</span></a>
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+                type="button"
+                aria-expanded="false"
+                aria-controls="navLinks"
+                aria-label="Open navigation menu">
+                ☰
+            </button>
+
+        </div>
+
+        <ul id="navLinks" class="nav-links">
+
+            <li><a href="activity1.html">Activity 1</a></li>
+
+            <li><a href="#About-Me">About Me</a></li>
+
+            <li><a href="#My-Hobbies">My Hobbies</a></li>
+
+            <li><a href="#My-Learning-Plan">Learning Plan</a></li>
+
+            <li><a href="#My-Photos">My Photos</a></li>
+
+            <li><a href="#My-Media">My Media</a></li>
+
+            <li><a href="#Contact">Contact</a></li>
+
+            <li>
+                <button id="themeToggle" type="button">
+                    ☀️ Light Mode
+                </button>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div id="navOverlay" class="nav-overlay"></div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- ABOUT ME -->
+        <section id="About-Me">
+
+            <h2>About Me</h2>
+
+            <p>
+                My name is <em>Elias Njamba Phiri</em>, and I am a
+                second-year Computer Science student at
+                <strong>Mulungushi University</strong>. I completed my
+                secondary education at <strong>Northmead Secondary School</strong>,
+                and I currently live in <strong>Matero North</strong>.
+                I would describe myself as a hardworking, determined,
+                and curious person who is always willing to learn and improve.
+                I enjoy spending time with friends, learning about technology,
+                and exploring new ideas that can help me grow as a person.
+            </p>
+
+            <p>
+                I chose to study Computer Science because I have always been
+                interested in computers and technology and how they can be
+                used to solve problems and make people's lives easier.
+                Since joining university, I have learned more about programming,
+                computer systems, problem-solving, and different areas of technology.
+                Although some topics can be challenging, I enjoy the learning
+                process because it pushes me to think differently and improve my skills.
+            </p>
+
+            <p>
+                As a student, I am also learning how to manage my time,
+                take responsibility for my decisions, and become more independent.
+                I believe that university is not only about getting good grades
+                but also about developing discipline, confidence, communication
+                skills, and practical knowledge. My goal is to continue working
+                hard, gain more experience in technology, and eventually build
+                a successful career in the IT and Computer Science field.
+                I also hope to use the knowledge and skills I gain to create
+                useful solutions that can help people in my community and beyond.
+            </p>
+
+            <a href="#Skills" class="button">View My Skills</a>
+
+            <p>
+                Visit Mulungushi University:
+                <a href="https://www.mu.ac.zm/" target="_blank" rel="noopener noreferrer">
+                    Mulungushi University
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- MY HOBBIES -->
+        <section id="My-Hobbies">
+
+            <h2>My Hobbies</h2>
+
+            <ul>
+                <li>Listening to music</li>
+                <li>Researching on technology</li>
+                <li>Computer repair</li>
+            </ul>
+
+        </section>
+
+
+        <!-- MY LEARNING PLAN -->
+        <section id="My-Learning-Plan">
+
+            <h2>My Learning Plan</h2>
+
+            <p>
+                My learning plan is to continue developing my skills and
+                knowledge in Computer Science, with a focus on programming,
+                software development, and computer systems. I plan to take
+                advantage of the resources available at Mulungushi University,
+                including attending lectures, participating in workshops,
+                and collaborating with fellow students on projects.
+                Additionally, I aim to continue developing the tech company
+                I recently started with my fellow students, staying updated
+                with the latest trends and advancements in technology by
+                reading articles, watching tutorials, and engaging in online
+                communities. My goal is to become proficient in various
+                programming languages and frameworks, as well as to gain
+                practical experience through internships and real-world projects.
+            </p>
+
+        </section>
+
+
+        <!-- MY PHOTOS -->
+        <section id="My-Photos">
+
+            <h2>My Photos</h2>
+
+            <div class="photo-gallery" id="photoGallery">
+
+                <figure>
+                    <img src="Images/Image 1.jpg" alt="My first photo" width="200">
+                    <figcaption>My First Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/Image 2.jpg" alt="My second photo" width="200">
+                    <figcaption>My Second Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/Image 3.jpg" alt="My third photo" width="200">
+                    <figcaption>My Third Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/Image 4.jpg" alt="My fourth photo" width="200">
+                    <figcaption>My Fourth Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/Image 5.jpg" alt="My fifth photo" width="200">
+                    <figcaption>My Fifth Photo</figcaption>
+                </figure>
+
+                <figure>
+                    <img src="Images/Image 6.jpg" alt="My sixth photo" width="200">
+                    <figcaption>My Sixth Photo</figcaption>
+                </figure>
+
+            </div>
+
+        </section>
+
+
+        <!-- PHOTO VIEWER -->
+        <div
+            id="photoViewer"
+            class="photo-viewer"
+            role="dialog"
+            aria-modal="true"
+            aria-label="Photo viewer"
+            hidden>
+
+            <button
+                id="closeViewer"
+                class="close-viewer"
+                type="button"
+                aria-label="Close photo viewer">
+                &times;
+            </button>
+
+            <button
+                id="previousPhoto"
+                class="photo-nav previous"
+                type="button"
+                aria-label="Previous photo">
+                &#10094;
+            </button>
+
+            <div class="viewer-content">
+
+                <img id="viewerImage" src="" alt="">
+
+                <p id="viewerCaption"></p>
+
+                <p id="photoCounter"></p>
+
+            </div>
+
+            <button
+                id="nextPhoto"
+                class="photo-nav next"
+                type="button"
+                aria-label="Next photo">
+                &#10095;
+            </button>
+
+        </div>
+
+
+        <!-- MY MEDIA -->
+        <section id="My-Media">
+
+            <h2>My Media</h2>
+
+            <p>Here is a video of me introducing myself:</p>
+
+            <video width="320" height="240" controls>
+                <source src="Videos/Video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p>Here is an audio recording of me:</p>
+
+            <audio controls>
+                <source src="Videos/Audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+        </section>
+</section>
+
+
+        <!-- SKILLS SECTION -->
+        <!-- Add your skills here so the View My Skills link works. -->
+        <section id="Skills">
+
+            <h2>My Skills</h2>
+
+            <ul>
+                <li>Basic Python programming</li>
+                <li>HTML and CSS</li>
+                <li>Computer troubleshooting</li>
+                <li>Computer hardware and software installation</li>
+                <li>Problem-solving</li>
+            </ul>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="Contact">
+
+            <h2>Contact</h2>
+
+            <form id="contactForm" novalidate>
+
+                <label for="name">Full Name:</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required>
+
+                <small id="nameError"></small>
+
+
+                <label for="email">Email Address:</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required>
+
+                <small id="emailError"></small>
+
+
+                <label for="message">Message:</label>
+
+                <textarea
+                    id="message"
+                    name="message"
+                    required></textarea>
+
+                <small id="messageError"></small>
+
+
+                <button type="submit">Validate and Preview</button>
+
+            </form>
+
+
+            <!-- FORM FEEDBACK -->
+            <div id="formFeedback" aria-live="polite"></div>
+
+
+            <!-- VALIDATED MESSAGE PREVIEW -->
+            <div id="formPreview" hidden>
+
+                <h3>Validated Message Preview</h3>
+
+                <p>
+                    <strong>Name:</strong>
+                    <span id="previewName"></span>
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <span id="previewEmail"></span>
+                </p>
+
+                <p>
+                    <strong>Message:</strong>
+                    <span id="previewMessage"></span>
+                </p>
+
+                <p>
+                    Your data was validated successfully.
+                    Your message has been submitted for review.
+                </p>
+
+            </div>
+
+        
+
+
+        <!-- FOOTER -->
+        <footer>
+
+            <p>
+                &copy; 2026 Elias Njamba Phiri. All rights reserved.
+            </p>
+
+            <a href="#">Back to Top</a>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
